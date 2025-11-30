@@ -48,7 +48,7 @@
       margin: 0 auto;
     }
 
-    /* TOP OFFER BANNER (728x90 area) */
+    /* TOP OFFER BANNER */
     .top-offer {
       background: linear-gradient(90deg, #0b8a5a, #2dd4bf);
       color: var(--white);
@@ -110,19 +110,17 @@
       color: var(--primary-dark);
     }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero {
       background: linear-gradient(
           135deg,
           rgba(0, 0, 0, 0.4),
           rgba(0, 0, 0, 0.4)
         ),
-        url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200")
-          center/cover no-repeat;
+        url("images/hero-beach.jpg") center/cover no-repeat;
       color: var(--white);
       padding: 70px 0 80px;
       text-align: center;
-      position: relative;
     }
 
     .hero-inner {
@@ -146,7 +144,7 @@
     }
 
     .hero h1 {
-      font-size: 36px;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
@@ -195,7 +193,7 @@
       background: #f3f4f6;
     }
 
-    /* GENERIC SECTION STYLE */
+    /* SECTIONS */
     section {
       padding: 50px 0;
     }
@@ -215,20 +213,14 @@
       color: var(--muted);
     }
 
-    /* ROOMS GRID */
+    /* ROOMS */
     .rooms-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 18px;
     }
 
-    @media (max-width: 992px) {
-      .rooms-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .rooms-grid {
         grid-template-columns: 1fr;
       }
@@ -244,39 +236,57 @@
     }
 
     .room-card img {
-      height: 150px;
+      height: 180px;
       object-fit: cover;
     }
 
     .room-body {
-      padding: 12px 14px 14px;
-      flex: 1;
+      padding: 14px 16px 16px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 4px;
     }
 
     .room-body h3 {
-      font-size: 16px;
-      margin-bottom: 4px;
+      font-size: 18px;
+    }
+
+    .room-sub {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary-dark);
     }
 
     .room-body p {
-      font-size: 12px;
+      font-size: 13px;
       color: var(--muted);
-      margin-bottom: 10px;
+    }
+
+    .room-price-single {
+      font-size: 16px;
+      margin: 4px 0 6px;
+      font-weight: 600;
+      color: #0b8a5a;
+    }
+    .room-price-single .old {
+      color: #bb0000;
+      text-decoration: line-through;
+      margin-right: 5px;
+      font-weight: normal;
+    }
+    .room-price-single .new {
+      color: #0b8a5a;
+      font-weight: 700;
     }
 
     .read-more {
       font-size: 12px;
       font-weight: 600;
       color: var(--primary);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      margin-top: 4px;
     }
 
-    /* REVIEWS (FB PAGE EMBED) */
+    /* REVIEWS */
     .reviews-box {
       background: var(--white);
       border-radius: var(--radius-xl);
@@ -296,7 +306,7 @@
       height: 350px;
     }
 
-    /* IMAGE CAROUSEL / GALLERY */
+    /* GALLERY */
     .gallery-wrapper {
       position: relative;
       overflow: hidden;
@@ -341,7 +351,7 @@
       margin: 0 10px;
     }
 
-    /* MAP SECTION */
+    /* MAP */
     .map-embed {
       border-radius: var(--radius-xl);
       overflow: hidden;
@@ -354,7 +364,7 @@
       border: 0;
     }
 
-    /* CALENDAR + TIME + COUNTER */
+    /* INFO GRID */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -390,7 +400,7 @@
       color: var(--muted);
     }
 
-    /* SECOND IMAGE SLIDER (HOTEL PHOTOS) */
+    /* SIMPLE SLIDER */
     .slider-wrapper {
       margin-top: 10px;
       border-radius: var(--radius-xl);
@@ -449,6 +459,44 @@
       resize: vertical;
     }
 
+    /* FACILITIES */
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) {
+      .facilities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .facility-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-soft);
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .facility-card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+
+    .facility-card ul {
+      padding-left: 18px;
+    }
+
+    .facility-card li {
+      margin-bottom: 4px;
+    }
+
     /* FOOTER */
     footer {
       background: #020617;
@@ -486,39 +534,16 @@
       font-size: 12px;
       color: #9ca3af;
     }
-    .room-price-single {
-  font-size: 16px;
-  margin: 10px 0;
-  font-weight: 600;
-  color: #0b8a5a;
-}
-
-.room-price-single .old {
-  color: #bb0000;
-  text-decoration: line-through;
-  margin-right: 5px;
-  font-weight: normal;
-}
-
-.room-price-single .old::after {
-  content: "";
-}
-
-.room-price-single .new {
-  color: #0b8a5a;
-  font-weight: 700;
-}
-
   </style>
 </head>
 <body>
-  <!-- TOP OFFER BANNER (728x90 AREA) -->
+  <!-- TOP OFFER -->
   <div class="top-offer">
     <span>🎁 Special Offer:</span>
-    Book 2 nights & get free island sunrise walk – Eco friendly stay at Saint Martin Beach Eco Resort.
+    Premium Bamboo & Semi Paka Cottage এখন ডিসকাউন্ট রেটে – Family & Couple Package চলমান।
   </div>
 
-  <!-- HEADER + NAV -->
+  <!-- HEADER -->
   <header id="main">
     <div class="container header-inner">
       <div class="logo">
@@ -541,16 +566,15 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-badge">
-        <span>🌿</span> Eco-friendly beach resort • No AC, pure sea breeze
+        <span>🌿</span> Eco-friendly beach resort • Bamboo & Semi Paka Cottage • BBQ & Food
       </div>
       <h1>স্বাগতম Saint Martin Beach Eco Resort-এ</h1>
       <p>
-        বঙ্গোপসাগরের ঢেউ, তারাভরা আকাশ আর প্রাকৃতিক সাগর বাতাসের মাঝে
-        সান্ত্বনা খুঁজে নিন। মাটির খুব কাছে, প্রকৃতির আরও কাছে।
+        সামনের সমুদ্র, চারপাশে নারিকেল গাছ, বাঁশের কটেজ আর রাতে রঙিন লাইট – 
+        আপনার ট্যুরকে স্মরণীয় করে রাখতে আমরা আছি সেন্টমার্টিনের West Beach, কুনার পাড়ায়।
       </p>
 
       <div class="hero-buttons" id="booking">
-        <!-- Main Booking Form – Saint Martin Beach Eco Resort -->
         <a
           href="https://forms.gle/avvWMSypAbf6eUmL8"
           target="_blank"
@@ -559,7 +583,6 @@
           📅 Booking করুন – Saint Martin Beach Eco Resort
         </a>
 
-        <!-- Room Availability Check Form -->
         <a
           href="https://forms.gle/bJxce4uNKQXXHykg7"
           target="_blank"
@@ -575,156 +598,119 @@
   <section id="rooms">
     <div class="container">
       <div class="section-title">
-        <h2>Our Rooms</h2>
-        <p>৮টি রুম – সাগরপাড়ের শান্ত পরিবেশ, ফ্যামিলি ও গ্রুপের জন্য উপযোগী</p>
+        <h2>Our Rooms & Current Offers</h2>
+        <p>Premium Bamboo & Semi Paka Cottage – Family ও Couple প্যাকেজ</p>
       </div>
 
-     <div class="room-body">
-    <div>
-        <h3>★Premium bamboo Eco Cottage★</h3>
-      <h3>★Double Bed ★</h3>
-        <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব রুম।</p>
-
-        <!-- PRICE SECTION -->
-        <div class="room-price">
-            <span class="room-price-old">৳ 6000</span>
-            <span class="room-price-current">৳ 4000 / প্রতি রাত</span>
-        </div>
-    </div>
-
-    <a href="room-sea-view-eco-cottage.html" class="read-more">
-        Read more →
-    </a>
-</div>
+      <div class="rooms-grid">
+        <!-- ROOM 1 -->
+        <div class="room-card">
+          <img src="images/bamboo-cottage-day.jpg" alt="Premium Bamboo Eco Cottage Double Bed" />
           <div class="room-body">
-    <div>
-        <h3>★Premium bamboo Eco Cottage★</h3>
-      <h3>★Couple Bed ★</h3>
-        <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব রুম।</p>
+            <h3>★Premium Bamboo Eco Cottage★</h3>
+            <div class="room-sub">★Double Bed★</div>
+            <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব কটেজ। Family বা ২–৩ জনের গ্রুপের জন্য পারফেক্ট।</p>
 
-        <!-- PRICE SECTION -->
-        <div class="room-price">
-            <span class="room-price-old">৳ 5500</span>
-            <span class="room-price-current">৳ 3500 / প্রতি রাত</span>
+            <div class="room-price-single">
+              ৳ <span class="old">6000</span> <span class="new">4000</span> / প্রতি রাত
+            </div>
+
+            <a href="room-premium-bamboo-double.html" class="read-more">Read more →</a>
+          </div>
         </div>
-    </div>
 
-    <a href="room-sea-view-eco-cottage.html" class="read-more">
-        Read more →
-    </a>
-</div>
-           <div class="room-body">
-    <div>
-        <h3>★Semi Paka break Cottage★</h3>
-      <h3>★Double Bed ★</h3>
-        <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব রুম।</p>
-
-        <!-- PRICE SECTION -->
-        <div class="room-price">
-            <span class="room-price-old">৳ 5000</span>
-            <span class="room-price-current">৳ 3500 / প্রতি রাত</span>
-        </div>
-    </div>
-
-    <a href="room-sea-view-eco-cottage.html" class="read-more">
-        Read more →
-    </a>
-</div>
-         <div class="room-body">
-    <div>
-        <h3>★Semi Paka break Cottage★★</h3>
-      <h3>★Couple Bed ★</h3>
-        <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব রুম।</p>
-
-        <!-- PRICE SECTION -->
-        <div class="room-price">
-            <span class="room-price-old">৳ 4500</span>
-            <span class="room-price-current">৳ 3000 / প্রতি রাত</span>
-        </div>
-    </div>
-
-    <a href="room-sea-view-eco-cottage.html" class="read-more">
-        Read more →
-    </a>
-</div>
-
-           <div class="room-body">
-    <div>
-        <h3>★Premium bamboo Eco Cottage★</h3>
-      <h3>★Double Bed ★</h3>
-        <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব রুম।</p>
-
-        <!-- PRICE SECTION -->
-        <div class="room-price">
-            <span class="room-price-old">৳ 6000</span>
-            <span class="room-price-current">৳ 4000 / প্রতি রাত</span>
-        </div>
-    </div>
-
-    <a href="room-sea-view-eco-cottage.html" class="read-more">
-        Read more →
-    </a>
-</div>
-
+        <!-- ROOM 2 -->
+        <div class="room-card">
+          <img src="images/bamboo-cottage-night.jpg" alt="Premium Bamboo Eco Cottage Couple Bed" />
           <div class="room-body">
-    <div>
-        <h3>★Premium bamboo Eco Cottage★</h3>
-      <h3>★Double Bed ★</h3>
-        <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব রুম।</p>
+            <h3>★Premium Bamboo Eco Cottage★</h3>
+            <div class="room-sub">★Couple Bed★</div>
+            <p>নিরিবিলি পরিবেশ, ঝুলনা ও হ্যামক জোনের কাছাকাছি, Newly married বা Couple ট্যুরের জন্য স্পেশাল কটেজ।</p>
 
-        <!-- PRICE SECTION -->
-        <div class="room-price">
-            <span class="room-price-old">৳ 6000</span>
-            <span class="room-price-current">৳ 4000 / প্রতি রাত</span>
+            <div class="room-price-single">
+              ৳ <span class="old">5500</span> <span class="new">3500</span> / প্রতি রাত
+            </div>
+
+            <a href="room-premium-bamboo-couple.html" class="read-more">Read more →</a>
+          </div>
         </div>
-    </div>
 
-    <a href="room-sea-view-eco-cottage.html" class="read-more">
-        Read more →
-    </a>
-</div>
+        <!-- ROOM 3 -->
+        <div class="room-card">
+          <img src="images/semipaka-row.jpg" alt="Semi Paka Break Cottage Double Bed" />
+          <div class="room-body">
+            <h3>★Semi Paka Break Cottage★</h3>
+            <div class="room-sub">★Double Bed★</div>
+            <p>আংশিক পাকা রুম, সামনে বারান্দা ও বসার জায়গা। যারা একটু সলিড বিল্ডিং চান তাদের জন্য this is best choice.</p>
 
-           <div class="room-body">
-    <div>
-        <h3>★Premium bamboo Eco Cottage★</h3>
-      <h3>★Double Bed ★</h3>
-        <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব রুম।</p>
+            <div class="room-price-single">
+              ৳ <span class="old">5000</span> <span class="new">3500</span> / প্রতি রাত
+            </div>
 
-        <!-- PRICE SECTION -->
-        <div class="room-price">
-            <span class="room-price-old">৳ 6000</span>
-            <span class="room-price-current">৳ 4000 / প্রতি রাত</span>
+            <a href="room-semipaka-double.html" class="read-more">Read more →</a>
+          </div>
         </div>
-    </div>
 
-    <a href="room-sea-view-eco-cottage.html" class="read-more">
-        Read more →
-    </a>
-</div>
+        <!-- ROOM 4 -->
+        <div class="room-card">
+          <img src="images/semipaka-night.jpg" alt="Semi Paka Break Cottage Couple Bed" />
+          <div class="room-body">
+            <h3>★Semi Paka Break Cottage★</h3>
+            <div class="room-sub">★Couple Bed★</div>
+            <p>নারিকেল গাছের ভেতরে শান্ত পরিবেশ, রাতে লাইটিং দারুণ সুন্দর। Couple বা ছোট ফ্যামিলি ট্যুরের জন্য উপযোগী।</p>
 
-         <div class="room-body">
-    <div>
-        <h3>★Premium bamboo Eco Cottage★</h3>
-      <h3>★Double Bed ★</h3>
-        <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব রুম।</p>
+            <div class="room-price-single">
+              ৳ <span class="old">4500</span> <span class="new">3000</span> / প্রতি রাত
+            </div>
 
-        <!-- PRICE SECTION -->
-        <div class="room-price">
-            <span class="room-price-old">৳ 6000</span>
-            <span class="room-price-current">৳ 4000 / প্রতি রাত</span>
-        </div>
-    </div>
-
-    <a href="room-sea-view-eco-cottage.html" class="read-more">
-        Read more →
-    </a>
-</div>
+            <a href="room-semipaka-couple.html" class="read-more">Read more →</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS – FACEBOOK PAGE SECTION -->
+  <!-- FACILITIES -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Facilities & Amenities</h2>
+        <p>আপনি রুম বুক করলে যেসব সুবিধা পাবেন</p>
+      </div>
+
+      <div class="facilities-grid">
+        <div class="facility-card">
+          <h3>Room Facilities</h3>
+          <ul>
+            <li>Welcome Drinks</li>
+            <li>Mineral Water</li>
+            <li>Room Spray</li>
+            <li>Towel & Washroom Tissue</li>
+            <li>Toothpaste & Brush</li>
+            <li>Shampoo & Soap</li>
+            <li>Detergent Powder</li>
+            <li>Mosquito Coils or Sprays</li>
+          </ul>
+        </div>
+
+        <div class="facility-card">
+          <h3>Outdoor & Service</h3>
+          <ul>
+            <li>Swing, Hammock, Machang</li>
+            <li>Kids Play Zone</li>
+            <li>Football & Badminton</li>
+            <li>Sound Box (on request)</li>
+            <li>Clean & well decorated area</li>
+            <li>24 hours room service</li>
+            <li>24 hours Electricity & Generator</li>
+            <li>100% Safe security</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS (FB PAGE) -->
   <section id="reviews">
     <div class="container">
       <div class="section-title">
@@ -734,9 +720,8 @@
 
       <div class="reviews-box">
         <div class="reviews-note">
-          ⭐ টিপস: নিচে তোমার ফেসবুক পেইজ URL ঠিক করে বসাও।
+          ⭐ নিচে তোমার ফেসবুক পেইজ URL ঠিক করে বসাও।
         </div>
-        <!-- এখানে পেজ URL পরিবর্তন করো -->
         <iframe
           src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/saintmartinbeachecoresort&tabs=timeline&width=500&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
           scrolling="no"
@@ -746,21 +731,22 @@
     </div>
   </section>
 
-  <!-- SAINT MARTIN IMAGE CAROUSEL (GALLERY) -->
+  <!-- GALLERY: Resort Photos -->
   <section>
     <div class="container">
       <div class="section-title">
-        <h2>Saint Martin Moments</h2>
-        <p>সেন্টমার্টিনের কিছু স্মৃতি – ইমেজ গ্যালারি</p>
+        <h2>Resort Moments</h2>
+        <p>দিন, রাত, ফুড & গ্রুপ ট্যুর – আমাদের কিছু স্মৃতি</p>
       </div>
 
       <div class="gallery-wrapper">
         <div class="gallery-slide" id="gallerySlide">
-          <!-- ছবির লিঙ্কগুলো নিজের মতো করে বদলাও -->
-          <img src="images/saintmartin1.jpg" alt="Saint Martin Beach" />
-          <img src="images/saintmartin2.jpg" alt="Blue Water" />
-          <img src="images/saintmartin3.jpg" alt="Sunset View" />
-          <img src="images/saintmartin4.jpg" alt="Coral Island" />
+          <img src="images/bamboo-sitting.jpg" alt="Bamboo cottage with guest" />
+          <img src="images/night-lights-swing.jpg" alt="Night view with swing" />
+          <img src="images/group-guests.jpg" alt="Group guests at resort" />
+          <img src="images/bbq-night.jpg" alt="BBQ night" />
+          <img src="images/hammock-garden.jpg" alt="Hammock garden" />
+          <img src="images/seafood-plate.jpg" alt="Food at resort" />
         </div>
 
         <div class="gallery-controls">
@@ -771,16 +757,15 @@
     </div>
   </section>
 
-  <!-- GOOGLE MAP LIVE LOCATION -->
+  <!-- MAP -->
   <section>
     <div class="container">
       <div class="section-title">
         <h2>How to Find Us</h2>
-        <p>Saint Martin Beach Eco Resort – কুনারপাড়া, সেন্টমার্টিন, টেকনাফ, কক্সবাজার</p>
+        <p>West Beach Konar Para, Saint Martin’s Island, Cox’s Bazar</p>
       </div>
 
       <div class="map-embed">
-        <!-- location: 20.62648548367583, 92.31892425567334 -->
         <iframe
           src="https://maps.google.com/maps?q=20.62648548367583,92.31892425567334&z=16&hl=bn&output=embed"
           loading="lazy"
@@ -789,30 +774,27 @@
     </div>
   </section>
 
-  <!-- CALENDAR + TIME + GUEST COUNTER -->
+  <!-- TODAY INFO -->
   <section>
     <div class="container">
       <div class="section-title">
         <h2>Today at Our Resort</h2>
-        <p>তারিখ, সময়, এবং আমাদের রিসোর্টে অবস্থান করা গেস্ট সংখ্যা</p>
+        <p>তারিখ, সময় এবং এই পর্যন্ত কতজন গেস্ট থাকেছেন</p>
       </div>
 
       <div class="info-grid">
-        <!-- DATE -->
         <div class="info-card">
           <h3>আজকের তারিখ</h3>
           <div class="info-value" id="todayDate">--</div>
           <div class="info-sub">বাংলাদেশ সময় অনুযায়ী</div>
         </div>
 
-        <!-- TIME -->
         <div class="info-card">
           <h3>বর্তমান সময়</h3>
           <div class="info-value" id="currentTime">--:--</div>
           <div class="info-sub">লাইভ ক্লক</div>
         </div>
 
-        <!-- GUEST COUNTER -->
         <div class="info-card">
           <h3>Total Guests Stayed</h3>
           <div class="info-value">
@@ -824,19 +806,18 @@
     </div>
   </section>
 
-  <!-- HOTEL IMAGE SLIDER -->
+  <!-- SIMPLE SLIDER (extra hotel photos) -->
   <section>
     <div class="container">
       <div class="section-title">
         <h2>Our Eco Friendly Space</h2>
-        <p>আমাদের রুম, করিডোর এবং আউটডোরের কয়েকটি ছবি</p>
+        <p>রুম, করিডোর এবং BBQ জোনের কিছু ছবি</p>
       </div>
 
       <div class="slider-wrapper" id="hotelSlider">
-        <!-- এখানে নিজের হোটেলের ছবি বসাও -->
-        <img src="images/hotel1.jpg" alt="Resort Photo 1" />
-        <img src="images/hotel2.jpg" alt="Resort Photo 2" style="display:none" />
-        <img src="images/hotel3.jpg" alt="Resort Photo 3" style="display:none" />
+        <img src="images/semipaka-front.jpg" alt="Semi paka cottage front" />
+        <img src="images/night-front-color.jpg" alt="Colourful night" style="display:none" />
+        <img src="images/bamboo-inside-room.jpg" alt="Inside bamboo room" style="display:none" />
       </div>
     </div>
   </section>
@@ -846,11 +827,10 @@
     <div class="container">
       <div class="section-title">
         <h2>অভিযোগ / মতামত বাক্স</h2>
-        <p>আপনার অভিযোগ, সাজেশন ও মতামত আমাদের জন্য অনেক গুরুত্বপূর্ণ</p>
+        <p>আপনার মতামত আমাদের সার্ভিস আরও ভালো করতে সাহায্য করবে</p>
       </div>
 
       <div class="complaint-box">
-        <!-- চাইলে action এ Google Form link বসিয়ে দিতে পারো -->
         <form action="#" method="post">
           <div>
             <label for="name">আপনার নাম</label>
@@ -872,42 +852,42 @@
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <div class="section-title">
         <h2>About Saint Martin Beach Eco Resort</h2>
-        <p>আমরা কেন Eco Friendly এবং কীভাবে আপনাকে সেফ ও আরামদায়ক স্টে দেই</p>
+        <p>Eco Friendly Bamboo & Semi Paka Cottage – Family & Group ট্যুরের জন্য উপযোগী</p>
       </div>
 
       <div style="max-width:800px;margin:0 auto;font-size:14px;color:var(--muted);background:#fff;padding:18px;border-radius:var(--radius-xl);box-shadow:var(--shadow-soft);">
         <p>
-          Saint Martin Beach Eco Resort হলো কক্সবাজার জেলার টেকনাফ উপজেলার সেন্টমার্টিন
-          দ্বীপের কুনারপাড়ায় অবস্থিত একটি পরিবেশবান্ধব আবাসিক হোটেল। এখানে আমরা
-          চেষ্টা করি যতটা সম্ভব প্রাকৃতিক বাতাস, কাঠ-বাঁশ ও গ্রীন সলিউশন ব্যবহার করতে।
-          AC নেই, আছে সমুদ্রের খাঁটি বাতাস, প্রাকৃতিক আলো আর নরম আবহাওয়া।
+          Saint Martin Beach Eco Resort সেন্টমার্টিন দ্বীপের West Beach, কুনার পাড়ায় অবস্থিত
+          একটি পরিবেশবান্ধব আবাসিক হোটেল। এখানে রয়েছে Premium Bamboo Eco Cottage ও Semi Paka
+          Cottage – যেখানে পরিবার, Couple, অফিস ট্যুর কিংবা বন্ধুদের গ্রুপ খুব আরামে থাকতে পারে।
         </p>
         <p style="margin-top:10px;">
-          আমাদের লক্ষ্য হলো পর্যটকদেরকে সাশ্রয়ী মূল্যে, সেফ ও ক্লিন একোমোডেশন
-          দেওয়া, যাতে তারা দ্বীপের প্রকৃতি উপভোগ করতে পারেন কোনো অযথা বিলাসিতা ছাড়া।
+          রিসোর্টের ভেতরে ঝুলনা, হ্যামক, কিডস প্লে জোন, ফুটবল ও ব্যাডমিন্টন খেলার ব্যবস্থা আছে।
+          রাতে রঙিন লাইটিং, BBQ সেটআপ আর বাড়ির মতো খাবারের আয়োজন – সব মিলিয়ে সেন্টমার্টিনের সফরটাকে
+          আরও স্মরণীয় করে তুলতে আমরা চেষ্টা করি।
         </p>
       </div>
     </div>
   </section>
 
-  <!-- PRIVACY SECTION -->
+  <!-- PRIVACY -->
   <section id="privacy">
     <div class="container">
       <div class="section-title">
         <h2>Privacy & Policy</h2>
-        <p>আপনার ডাটা, বুকিং ইনফরমেশন ও নিরাপত্তা আমাদের কাছে গুরুত্বপূর্ণ</p>
+        <p>আপনার তথ্য ও নিরাপত্তা আমাদের কাছে গুরুত্বপূর্ণ</p>
       </div>
       <div style="max-width:800px;margin:0 auto;font-size:13px;color:var(--muted);background:#fff;padding:18px;border-radius:var(--radius-xl);box-shadow:var(--shadow-soft);">
         <ul style="padding-left:16px;">
-          <li>আমরা আপনার নাম, মোবাইল ও বুকিং তথ্য শুধু রিসোর্ট সম্পর্কিত কাজে ব্যবহার করি।</li>
-          <li>আপনার অনুমতি ছাড়া কোনো থার্ড পার্টির সাথে ব্যক্তিগত তথ্য শেয়ার করা হয় না।</li>
-          <li>গুগল ফর্ম/অনলাইন বুকিং ডাটা সিকিউরভাবে গুগল ক্লাউডে সেভ থাকে।</li>
-          <li>রিভিউ বা ছবি ব্যবহার করার আগে প্রয়োজনে গেস্টের অনুমতি নেওয়া হয়।</li>
+          <li>আপনার নাম, মোবাইল ও বুকিং তথ্য শুধুই রিসোর্ট বুকিং ও যোগাযোগের কাজে ব্যবহার করা হয়।</li>
+          <li>আপনার অনুমতি ছাড়া কোনো তৃতীয় পক্ষের সাথে ব্যক্তিগত তথ্য শেয়ার করা হয় না।</li>
+          <li>Google Form/Online booking ডাটা সিকিউরভাবে গুগল ক্লাউডে থাকে।</li>
+          <li>গেস্টের ছবি বা রিভিউ ব্যবহার করার আগে প্রয়োজনে গেস্টের সম্মতি নেওয়া হয়।</li>
         </ul>
       </div>
     </div>
@@ -920,15 +900,17 @@
         <div>
           <div class="footer-title">Saint Martin Beach Eco Resort</div>
           <p>
-            Eco friendly আবাসিক হোটেল – কুনারপাড়া, সেন্টমার্টিন, টেকনাফ, কক্সবাজার।
-            সাগরের ঢেউ, নরম বালি আর সবুজের মাঝে কিছু শান্ত সময় কাটিয়ে যান।
+            Eco friendly আবাসিক হোটেল – West Beach Konar Para, Saint Martin’s Island, Cox’s Bazar।
+            সাগরের ঢেউ, নারিকেল গাছ আর রাতের রঙিন লাইটের মাঝে কিছু শান্ত সময় কাটিয়ে যান।
           </p>
         </div>
         <div class="footer-contact">
           <div class="footer-title">Contact</div>
-          <p>📞 Phone: <a href="tel:+8801XXXXXXXXX">+8801XXXXXXXXX</a></p>
-          <p>✉️ Email: <a href="mailto:info@stbeachecoresort.com">info@stbeachecoresort.com</a></p>
-          <p>📍 Address: কুনারপাড়া, সেন্টমার্টিন, টেকনাফ, কক্সবাজার</p>
+          <p>📞 01781433381 (WhatsApp)</p>
+          <p>📞 01886433381</p>
+          <p>✉️ Email: info@stbeachecoresort.com</p>
+          <p>📍 West Beach Konar Para, Saint Martin’s Island, Cox’s Bazar</p>
+          <p>💳 bKash/Nagad/Rocket (Personal): 01781433381</p>
         </div>
       </div>
 
@@ -939,38 +921,25 @@
     </div>
   </footer>
 
-  <!-- JS: DATE, TIME, COUNTER, GALLERIES -->
+  <!-- JS -->
   <script>
-    // ===== DATE & TIME (Bangladesh Time) =====
+    // DATE & TIME
     function updateDateTime() {
       const now = new Date();
-      const optionsDate = {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      };
-      const optionsTime = {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-      };
-      document.getElementById("todayDate").textContent = now.toLocaleDateString(
-        "bn-BD",
-        optionsDate
-      );
-      document.getElementById("currentTime").textContent = now.toLocaleTimeString(
-        "bn-BD",
-        optionsTime
-      );
+      const optionsDate = { year: "numeric", month: "long", day: "numeric" };
+      const optionsTime = { hour: "2-digit", minute: "2-digit", second: "2-digit" };
+      document.getElementById("todayDate").textContent =
+        now.toLocaleDateString("bn-BD", optionsDate);
+      document.getElementById("currentTime").textContent =
+        now.toLocaleTimeString("bn-BD", optionsTime);
     }
     updateDateTime();
     setInterval(updateDateTime, 1000);
 
-    // ===== GUEST COUNTER (start from 3622) =====
+    // GUEST COUNTER
     const guestTarget = 3622;
     let guestCurrent = 0;
     const guestEl = document.getElementById("guestCounter");
-
     function animateGuests() {
       const step = Math.ceil(guestTarget / 80);
       const timer = setInterval(() => {
@@ -984,16 +953,14 @@
     }
     animateGuests();
 
-    // ===== IMAGE GALLERY (SAINT MARTIN) =====
+    // GALLERY SLIDER
     const gallerySlide = document.getElementById("gallerySlide");
     const galleryImages = gallerySlide.querySelectorAll("img");
     let galleryIndex = 0;
-
     function updateGallery() {
       const width = gallerySlide.clientWidth;
       gallerySlide.style.transform = `translateX(-${galleryIndex * width}px)`;
     }
-
     document.getElementById("prevGallery").addEventListener("click", () => {
       galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
       updateGallery();
@@ -1002,20 +969,16 @@
       galleryIndex = (galleryIndex + 1) % galleryImages.length;
       updateGallery();
     });
-
     window.addEventListener("resize", updateGallery);
-
-    // Auto slide
     setInterval(() => {
       galleryIndex = (galleryIndex + 1) % galleryImages.length;
       updateGallery();
     }, 5000);
 
-    // ===== SECOND SLIDER (HOTEL IMAGES) =====
+    // SIMPLE HOTEL SLIDER
     const hotelSlider = document.getElementById("hotelSlider");
     const hotelImages = hotelSlider.querySelectorAll("img");
     let hotelIndex = 0;
-
     function rotateHotelSlider() {
       hotelImages.forEach((img, idx) => {
         img.style.display = idx === hotelIndex ? "block" : "none";
