@@ -749,6 +749,32 @@
     padding: 7px 10px;
   }
 }
+    /* --- Hero Background Image Override --- */
+.hero {
+  background: url('hero.jpg') no-repeat center center/cover;
+  padding: 130px 0 160px;
+  position: relative;
+  color: #ffffff;
+}
+
+/* উপরে ডার্ক শেড যাতে লেখা পরিষ্কার দেখা যায় */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* ভিতরের লেখা/বাটন overlay-এর উপরে থাকবে */
+.hero .container,
+.hero h1,
+.hero p,
+.hero-buttons {
+  position: relative;
+  z-index: 2;
+}
+
   </style>
 </head>
 <body>
