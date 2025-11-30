@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saint Martin Beach Eco Resort</title>
+
   <style>
     :root {
       --primary: #0b8a5a;
@@ -48,7 +49,7 @@
       margin: 0 auto;
     }
 
-    /* TOP OFFER BANNER */
+    /* TOP OFFER */
     .top-offer {
       background: linear-gradient(90deg, #0b8a5a, #2dd4bf);
       color: var(--white);
@@ -114,8 +115,8 @@
     .hero {
       background: linear-gradient(
           135deg,
-          rgba(0, 0, 0, 0.4),
-          rgba(0, 0, 0, 0.4)
+          rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.45)
         ),
         url("images/hero-beach.jpg") center/cover no-repeat;
       color: var(--white);
@@ -193,12 +194,12 @@
       background: #f3f4f6;
     }
 
-    /* SECTIONS */
+    /* GENERIC SECTION */
     section {
       padding: 50px 0;
     }
 
-    section .section-title {
+    .section-title {
       text-align: center;
       margin-bottom: 28px;
     }
@@ -264,7 +265,7 @@
 
     .room-price-single {
       font-size: 16px;
-      margin: 4px 0 6px;
+      margin: 6px 0 6px;
       font-weight: 600;
       color: #0b8a5a;
     }
@@ -286,61 +287,121 @@
       margin-top: 4px;
     }
 
-  <section id="reviews">
-  <div class="container">
-    <div class="section-title">
-      <h2>Reviews</h2>
-      <p>আমাদের ফেসবুক পেইজের লাইভ রিভিউ দেখুন</p>
-    </div>
+    /* FACILITIES */
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-    <div class="reviews-box">
+    @media (max-width: 700px) {
+      .facilities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
-      <!-- LEFT: Facebook Box -->
-      <div class="reviews-left">
-        <div class="reviews-note">
-          ⭐ নিচে আমাদের ফেসবুক পেইজের লাইভ আপডেট দেখুন।
-        </div>
+    .facility-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-soft);
+      font-size: 14px;
+      color: var(--muted);
+    }
 
-        <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https://web.facebook.com/profile.php?id=100069865264318&tabs=timeline&width=500&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
-          width="100%"
-          height="400"
-          style="border:none;overflow:hidden"
-          scrolling="no"
-          frameborder="0"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-        </iframe>
-      </div>
+    .facility-card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
 
-      <!-- RIGHT: Instagram Box -->
-      <div class="insta-box">
-        <h3>Instagram Moments</h3>
+    .facility-card ul {
+      padding-left: 18px;
+    }
 
-        <p>
-          আমাদের রিসোর্টের রিলস, অতিথিদের মুহূর্ত, নাইট শাইন, কটেজ ভিউ এবং BBQ আপডেট Instagram-এ দেখুন।
-        </p>
+    .facility-card li {
+      margin-bottom: 4px;
+    }
 
-        <a
-          href="https://www.instagram.com/shuvo4186?utm_source=qr&igsh=c2hrOHk1Zm16OHYw"
-          target="_blank"
-          class="insta-follow"
-        >
-          📸 Follow on Instagram
-        </a>
+    /* REVIEWS (FB + INSTA) */
+    .reviews-grid {
+      background: #ffffff;
+      border-radius: 26px;
+      box-shadow: var(--shadow-soft);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 22px;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
 
-        <iframe
-          class="insta-frame"
-          src="https://www.instagram.com/shuvo4186/embed"
-          scrolling="no"
-          frameborder="0"
-          allowtransparency="true"
-        ></iframe>
-      </div>
+    .reviews-note {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #444;
+    }
 
-    </div>
-  </div>
-</section>
+    .reviews-left iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+    }
 
+    .insta-box {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      font-size: 14px;
+      color: #555;
+    }
+
+    .insta-box h3 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    .insta-box p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .insta-follow {
+      display: inline-block;
+      background: #e1306c;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 14px;
+    }
+
+    .insta-follow:hover {
+      filter: brightness(0.9);
+    }
+
+    .insta-frame {
+      width: 100%;
+      min-height: 280px;
+      border: none;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 900px) {
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     /* GALLERY */
     .gallery-wrapper {
@@ -495,44 +556,6 @@
       resize: vertical;
     }
 
-    /* FACILITIES */
-    .facilities-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 700px) {
-      .facilities-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .facility-card {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      padding: 16px 18px;
-      box-shadow: var(--shadow-soft);
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .facility-card h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-      color: var(--primary-dark);
-    }
-
-    .facility-card ul {
-      padding-left: 18px;
-    }
-
-    .facility-card li {
-      margin-bottom: 4px;
-    }
-
     /* FOOTER */
     footer {
       background: #020617;
@@ -570,58 +593,49 @@
       font-size: 12px;
       color: #9ca3af;
     }
-    /* Instagram Box */
-.insta-box {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  border: 1px solid #e3e3e3;
-}
 
-.insta-box h3 {
-  font-size: 18px;
-  color: var(--primary-dark);
-  margin-bottom: 8px;
-}
+    /* WhatsApp Floating Button */
+    .whatsapp-btn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+      background: #25d366;
+      color: #ffffff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
 
-.insta-box p {
-  font-size: 14px;
-  color: #6b7280;
-  margin-bottom: 12px;
-}
+    .whatsapp-btn span.icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
 
-.insta-follow {
-  display: inline-block;
-  background: #e1306c;
-  color: #ffffff !important;
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 14px;
-  text-decoration: none;
-}
+    .whatsapp-btn:hover {
+      filter: brightness(0.95);
+      transform: translateY(-1px);
+    }
 
-.insta-follow:hover {
-  filter: brightness(0.9);
-}
-
-.insta-frame {
-  width: 100%;
-  min-height: 270px;
-  border-radius: 14px;
-  border: none;
-  overflow: hidden;
-}
-
-/* Padding fix on small device */
-@media(max-width: 700px){
-  .insta-box {
-    padding: 12px;
-  }
-}
-
+    @media (max-width: 600px) {
+      .whatsapp-btn {
+        padding: 8px 12px;
+        font-size: 13px;
+        right: 12px;
+        bottom: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -658,7 +672,7 @@
       </div>
       <h1>স্বাগতম Saint Martin Beach Eco Resort-এ</h1>
       <p>
-        সামনের সমুদ্র, চারপাশে নারিকেল গাছ, বাঁশের কটেজ আর রাতে রঙিন লাইট – 
+        সামনের সমুদ্র, চারপাশে নারিকেল গাছ, বাঁশের কটেজ আর রাতে রঙিন লাইট –
         আপনার ট্যুরকে স্মরণীয় করে রাখতে আমরা আছি সেন্টমার্টিনের West Beach, কুনার পাড়ায়।
       </p>
 
@@ -697,7 +711,7 @@
           <div class="room-body">
             <h3>★Premium Bamboo Eco Cottage★</h3>
             <div class="room-sub">★Double Bed★</div>
-            <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশ ও কাঠের পরিবেশবান্ধব কটেজ। Family বা ২–৩ জনের গ্রুপের জন্য পারফেক্ট।</p>
+            <p>সামনে সরাসরি সমুদ্র দেখা যায়, বাঁশের পরিবেশবান্ধব কটেজ – ফ্যামিলি বা ২–৩ জনের গ্রুপের জন্য পারফেক্ট।</p>
 
             <div class="room-price-single">
               ৳ <span class="old">6000</span> <span class="new">4000</span> / প্রতি রাত
@@ -713,7 +727,7 @@
           <div class="room-body">
             <h3>★Premium Bamboo Eco Cottage★</h3>
             <div class="room-sub">★Couple Bed★</div>
-            <p>নিরিবিলি পরিবেশ, ঝুলনা ও হ্যামক জোনের কাছাকাছি, Newly married বা Couple ট্যুরের জন্য স্পেশাল কটেজ।</p>
+            <p>নিরিবিলি পরিবেশ, ঝুলনা ও হ্যামক জোনের কাছাকাছি – Newly married বা Couple ট্যুরের জন্য স্পেশাল কটেজ।</p>
 
             <div class="room-price-single">
               ৳ <span class="old">5500</span> <span class="new">3500</span> / প্রতি রাত
@@ -729,7 +743,7 @@
           <div class="room-body">
             <h3>★Semi Paka Break Cottage★</h3>
             <div class="room-sub">★Double Bed★</div>
-            <p>আংশিক পাকা রুম, সামনে বারান্দা ও বসার জায়গা। যারা একটু সলিড বিল্ডিং চান তাদের জন্য this is best choice.</p>
+            <p>আংশিক পাকা রুম, সামনে বারান্দা ও বসার জায়গা – যারা একটু সলিড বিল্ডিং চান তাদের জন্য বেস্ট চয়েস।</p>
 
             <div class="room-price-single">
               ৳ <span class="old">5000</span> <span class="new">3500</span> / প্রতি রাত
@@ -745,7 +759,7 @@
           <div class="room-body">
             <h3>★Semi Paka Break Cottage★</h3>
             <div class="room-sub">★Couple Bed★</div>
-            <p>নারিকেল গাছের ভেতরে শান্ত পরিবেশ, রাতে লাইটিং দারুণ সুন্দর। Couple বা ছোট ফ্যামিলি ট্যুরের জন্য উপযোগী।</p>
+            <p>নারিকেল গাছের ভেতরে শান্ত পরিবেশ, রাতে লাইটিং দারুণ সুন্দর – Couple বা ছোট ফ্যামিলি ট্যুরের জন্য উপযোগী।</p>
 
             <div class="room-price-single">
               ৳ <span class="old">4500</span> <span class="new">3000</span> / প্রতি রাত
@@ -798,59 +812,53 @@
     </div>
   </section>
 
-  <!-- REVIEWS (FB PAGE) -->
+  <!-- REVIEWS (FB + INSTA) -->
   <section id="reviews">
     <div class="container">
       <div class="section-title">
         <h2>Reviews</h2>
-        <p>আমাদের ফেসবুক পেইজের লাইভ রিভিউ দেখুন</p>
+        <p>আমাদের ফেসবুক পেইজ ও Instagram এ গেস্টদের অভিজ্ঞতা দেখুন</p>
       </div>
-<div class="reviews-box">
 
-  <!-- LEFT: Facebook Box -->
-  <div class="reviews-left">
-    <div class="reviews-note">
-      ⭐ নিচে আমাদের ফেসবুক পেইজের লাইভ আপডেট দেখুন।
+      <div class="reviews-grid">
+        <!-- LEFT: Facebook Page -->
+        <div class="reviews-left">
+          <div class="reviews-note">
+            ⭐ নিচে আমাদের ফেসবুক পেইজের লাইভ আপডেট দেখুন।
+          </div>
+
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https://web.facebook.com/profile.php?id=100069865264318&tabs=timeline&width=500&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+            scrolling="no"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
+        </div>
+
+        <!-- RIGHT: Instagram Box -->
+        <div class="insta-box">
+          <h3>Instagram Moments</h3>
+          <p>
+            আমাদের রিসোর্টের রিলস, অতিথিদের মুহূর্ত, নাইট লাইট, কটেজ ভিউ এবং BBQ আপডেট Instagram-এ দেখুন।
+          </p>
+
+          <a
+            href="https://www.instagram.com/shuvo4186?utm_source=qr&igsh=c2hrOHk1Zm16OHYw"
+            target="_blank"
+            class="insta-follow">
+            📸 Follow on Instagram
+          </a>
+
+          <iframe
+            class="insta-frame"
+            src="https://www.instagram.com/shuvo4186/embed"
+            scrolling="no"
+            frameborder="0"
+            allowtransparency="true">
+          </iframe>
+        </div>
+      </div>
     </div>
-
-    <iframe
-      src="https://www.facebook.com/plugins/page.php?href=https://web.facebook.com/profile.php?id=100069865264318&tabs=timeline&width=500&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
-      width="100%"
-      height="400"
-      style="border:none;overflow:hidden"
-      scrolling="no"
-      frameborder="0"
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-    </iframe>
-  </div>
-
-  <!-- RIGHT: Instagram Box -->
-  <div class="insta-box">
-    <h3>Instagram Moments</h3>
-
-    <p>
-      আমাদের রিসোর্টের রিলস, অতিথিদের মুহূর্ত, নাইট লাইট, কটেজ ভিউ এবং BBQ আপডেট Instagram-এ দেখুন।
-    </p>
-
-    <a
-      href="https://www.instagram.com/shuvo4186?utm_source=qr&igsh=c2hrOHk1Zm16OHYw"
-      target="_blank"
-      class="insta-follow"
-    >
-      📸 Follow on Instagram
-    </a>
-
-    <iframe
-      class="insta-frame"
-      src="https://www.instagram.com/shuvo4186/embed"
-      scrolling="no"
-      frameborder="0"
-      allowtransparency="true"
-    ></iframe>
-  </div>
-
-</div>
-
   </section>
 
   <!-- GALLERY: Resort Photos -->
@@ -1042,6 +1050,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a
+    href="https://wa.me/8801781433381?text=Assalamu%20Alaikum%2C%20Saint%20Martin%20Beach%20Eco%20Resort%20e%20room%20booking%20ba%20room%20availability%20jante%20chai."
+    target="_blank"
+    class="whatsapp-btn"
+  >
+    <span class="icon">💬</span>
+    WhatsApp এ মেসেজ করুন
+  </a>
 
   <!-- JS -->
   <script>
