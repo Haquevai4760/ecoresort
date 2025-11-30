@@ -636,6 +636,114 @@
         bottom: 12px;
       }
     }
+    /* ---------- EXTRA MOBILE TUNING ---------- */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;          /* ডানে-বামে স্ক্রল বন্ধ */
+  }
+
+  .container {
+    width: 92%;                  /* একটু কম, যেন পাশ কাটে না */
+  }
+
+  /* হেডার */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+  .logo small {
+    font-size: 10px;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  nav a {
+    padding: 4px 8px;
+  }
+
+  /* হিরো সেকশন */
+  .hero {
+    padding: 40px 0 50px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* রুম কার্ড */
+  .rooms-grid {
+    grid-template-columns: 1fr;   /* সব রুম এক কলামে */
+  }
+
+  .room-card img {
+    height: 150px;
+  }
+
+  /* রিভিউ – Facebook + Instagram */
+  .reviews-grid {
+    grid-template-columns: 1fr;   /* উপরে FB, নিচে Insta */
+    padding: 14px;
+  }
+
+  .reviews-left iframe {
+    height: 350px;
+  }
+
+  .insta-frame {
+    min-height: 260px;
+  }
+
+  /* Gallery & slider height */
+  .gallery-slide img,
+  .slider-wrapper img {
+    height: 220px;
+  }
+
+  /* Info cards এক কলামে থাকবেই, শুধু ফন্ট একটু ছোট */
+  .info-card h3 {
+    font-size: 14px;
+  }
+  .info-value {
+    font-size: 22px;
+  }
+
+  /* Complaint box কম padding */
+  .complaint-box {
+    padding: 14px;
+  }
+
+  footer {
+    padding: 20px 0 14px;
+  }
+
+  .whatsapp-btn {
+    right: 10px;
+    bottom: 10px;
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+}
   </style>
 </head>
 <body>
