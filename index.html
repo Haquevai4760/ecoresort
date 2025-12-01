@@ -1415,6 +1415,17 @@
     }
     rotateHotelSlider();
     setInterval(rotateHotelSlider, 4000);
+     // --- Complaint form simple handler ---
+const complaintForm = document.querySelector('.complaint-box form');
+
+if (complaintForm) {
+  complaintForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Reload বন্ধ
+    alert('✅ Thanks for your message!'); // ধন্যবাদ মেসেজ
+    complaintForm.reset(); // ইনপুট ক্লিয়ার
+  });
+}
+
   </script>
 </body>
 </html>
