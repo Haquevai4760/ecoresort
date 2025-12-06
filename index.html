@@ -838,6 +838,27 @@
     border-radius: 12px;
     margin-bottom: 15px;
 }
+/* ==== GOOGLE SHEET EMBED STYLES (ADD THIS) ==== */
+.room-availability {
+  margin: 40px auto 20px;
+  max-width: 1100px;
+  padding: 20px;
+}
+
+.sheet-wrapper {
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.sheet-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
   </style>
 </head>
@@ -898,6 +919,19 @@
       </div>
     </div>
   </section>
+  <div class="room-availability">
+  <h3 style="text-align:center; margin-bottom:8px;">
+    Today’s Room Availability
+  </h3>
+
+  <div class="sheet-wrapper">
+    <iframe
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYVlPmF9txGagjvkD5WwLm_OxCB1jfVqiH4pQKPREnkjx7uHhG-C3lnYoil7kvUcsx7rUIlI8sBUV9/pubhtml?gid=2056424030&single=true&widget=true&headers=false"
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+
   <!-- OUR ROOMS -->
   <section id="rooms">
     <div class="container">
